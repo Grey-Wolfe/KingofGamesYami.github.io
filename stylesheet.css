@@ -3,7 +3,8 @@
   background-color:black;
 }
 a:hover{
-  color:green;
+  border:1px dashed green;
+  background-color:gray;
 }
 
 a{
