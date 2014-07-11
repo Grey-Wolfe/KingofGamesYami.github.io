@@ -9,3 +9,7 @@ a:hover{
 a{
   color:blue;
 }
+
+.button a{
+  color:red;
+}
