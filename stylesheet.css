@@ -2,7 +2,10 @@
   border:1px dashed green;
   background-color:blue;
 }
-.button a:hover{
-  border:2px solid green;
-  background-color:red;
+a:hover{
+  color:green;
+}
+
+a{
+  color:blue;
 }
