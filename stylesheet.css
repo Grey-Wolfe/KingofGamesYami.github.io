@@ -1,19 +1,16 @@
 .button{
-  border-radius:10px;
+  border-radius:100%;
   border:1px dashed green;
   background-color:black;
-  width:100px;
-  height:50px;
 }
-a:hover{
-  border:1px dashed green;
+
+.button:hover{
+  border-radius:100%;
+  border:1px solid green;
   background-color:gray;
 }
 
 a{
   color:blue;
-}
-
-.button a{
-  color:red;
+  text-decoration:none;
 }
