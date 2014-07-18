@@ -1,6 +1,6 @@
 .button {
 	background-color:#4C4C4C;
-	border-radius:50%;
+	border-radius:100%;
 	border:1px dashed #3366CC;
 	text-decoration:none;
 	color:#191919;
@@ -9,7 +9,7 @@
 }
 .button:hover {
 	background-color:#999999;
-	border-radius:50%;
+	border-radius:100%;
 	border:1px solid #3366CC;
 	text-decoration:bold;
 	color:#F0F0F0;
