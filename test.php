@@ -1,4 +1,4 @@
-<!DOCTYPE=PHP>
+<!DOCTYPE=html>
 <?php
   echo $_POST["it"]
 ?>
