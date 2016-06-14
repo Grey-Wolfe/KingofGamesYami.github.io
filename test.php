@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
 <?php
-  echo $_POST["it"]
+  echo "<iframe src=\"" + $_GET["url"] + "\";height=\"" + screen.height + "\";width=\"" + screen.width + "\"></iframe>"
 ?>
 </html>
