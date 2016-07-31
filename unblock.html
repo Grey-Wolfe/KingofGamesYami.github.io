@@ -10,7 +10,10 @@
     if( event.altKey && event.key == "r" ){
       iframe.src += '';
     }else if( event.altKey && event.key == "n" ){
-      iframe.src = prompt("Please enter your URL (do not leave out http://)", "http://www.duelingnetwork.com/") || iframe.src;
+      var src = prompt("Please enter your URL (do not leave out http://)", "http://www.duelingnetwork.com/");
+      if(src){
+        iframe.src = src;
+      }
     }
   }
 </script>
