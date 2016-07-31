@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
-<body style="margin:0px;padding:0px;overflow:hidden">
+<body style="margin:0px;padding:0px;overflow:hidden" onkeydown="processKey( event )">
 <iframe src="" frameborder="0" style="overflow:hidden;height:100vh;width:100%" height="1000" width="100%" id="window"></iframe>
 <script>
   var iframe = document.getElementById("window")
   iframe.src = prompt("Please enter your URL (do not leave out http://)", "http://www.duelingnetwork.com/");
   iframe.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  function processKey( event ){
+    if( event.altKey && event.key == "r" ){
+      iframe.src += '';
+    }else if( event.altKey && event.key == "n" ){
+      iframe.src = prompt("Please enter your URL (do not leave out http://)", "http://www.duelingnetwork.com/");
+    }
+  }
 </script>
 </body>
 </html>
