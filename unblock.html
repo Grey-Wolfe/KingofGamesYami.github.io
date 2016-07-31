@@ -11,7 +11,7 @@
       iframe.src += '';
     }else if( event.altKey && event.key == "n" ){
       var src = prompt("Please enter your URL (do not leave out http://)", "http://www.duelingnetwork.com/");
-      if(src){
+      if(src != null){
         iframe.src = src;
       }
     }
