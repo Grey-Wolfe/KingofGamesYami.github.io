@@ -4,7 +4,8 @@
 <iframe src="" frameborder="0" style="overflow:hidden;height:100vh;width:100%" height="1000" width="100%" id="window"></iframe>
 <script>
   var iframe = document.getElementById("window")
-  iframe.src = prompt("Please enter your URL (do not leave out http://)", "http://www.duelingnetwork.com/");
+  var str = window.location.href;
+  iframe.src = str.slice( str.indexOf( "?" ) );
   iframe.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
   function processKey( event ){
     if( event.altKey && event.key == "r" ){
@@ -12,7 +13,7 @@
     }else if( event.altKey && event.key == "n" ){
       var src = prompt("Please enter your URL (do not leave out http://)", "http://www.duelingnetwork.com/");
       if(src != null){
-        iframe.src = src;
+        window.location.href = "https://kingofgamesyami.github.io/?" + src;
       }
     }
   }
