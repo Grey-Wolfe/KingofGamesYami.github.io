@@ -5,7 +5,7 @@
 <script>
   var iframe = document.getElementById("window")
   var str = window.location.href;
-  iframe.src = str.slice( str.indexOf( "?" ) );
+  iframe.src = str.slice( str.indexOf( "?" ) + 1 );
   iframe.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
   function processKey( event ){
     if( event.altKey && event.key == "r" ){
