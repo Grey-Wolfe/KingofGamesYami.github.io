@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+<link id="favicon" rel="shortcut icon" type="image/png" href="favicon.png" />
 <body style="margin:0px;padding:0px;overflow:hidden" onkeydown="processKey( event )">
 <iframe src="" frameborder="0" style="overflow:hidden;height:100vh;width:100%" height="1000" width="100%" id="window"></iframe>
 <script>
   var iframe = document.getElementById("window")
   var str = window.location.href;
   iframe.src = str.slice( str.indexOf( "?" ) + 1 );
+  $("#favicon").attr("href", "https://www.google.com/s2/favicons?domain=" +iframe.src );
   iframe.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
   function processKey( event ){
     if( event.altKey && event.key == "r" ){
