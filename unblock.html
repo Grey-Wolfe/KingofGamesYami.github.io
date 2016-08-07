@@ -7,6 +7,9 @@
   var str = window.location.href;
   iframe.src = str.slice( str.indexOf( "?" ) + 1 );
   iframe.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  iframe.onload = function() {
+    document.title = iframe.contentDocument.title;
+  }
   //icon changing
   var link = document.createElement('link');
   link.type = 'image/x-icon';
