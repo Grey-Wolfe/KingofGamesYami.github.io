@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Unblock</title>
+    <title id="title">Unblock</title>
   </head>
 <body style="margin:0px;padding:0px;overflow:hidden" onkeydown="processKey( event )">
 <iframe src="" frameborder="0" style="overflow:hidden;height:100vh;width:100%" height="1000" width="100%" id="window"></iframe>
@@ -17,9 +17,7 @@
   var str = window.location.href;
   iframe.src = str.slice( str.indexOf( "?" ) + 1 );
   iframe.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-  iframe.onload = function() {
-    document.title = httpGet( "http://textance.herokuapp.com/title/" + iframe.src )
-  }
+  document.title = httpGet( "http://textance.herokuapp.com/title/" + iframe.src )
   //icon changing
   var link = document.createElement('link');
   link.type = 'image/x-icon';
