@@ -16,14 +16,14 @@
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
   }
-  
-  //change the title
-  httpGetAsync( "http://textance.herokuapp.com/title/" + str.slice( str.indexOf( "?http://" + 8 ) ), function( str ){
-    document.title = str
-  } );
 
   var iframe = document.getElementById("window");
   var str = window.location.href;
+  
+  httpGetAsync( "http://textance.herokuapp.com/title/" + str.slice( str.indexOf( "?http://" + 8 ) ), function( str ){
+    document.title = str
+  } );
+  //change the title
   iframe.src = str.slice( str.indexOf( "?" ) + 1 );
   iframe.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
