@@ -13,11 +13,12 @@
     return xmlHttp.responseText;
   }
 
-  var iframe = document.getElementById("window")
+  var iframe = document.getElementById("window");
   var str = window.location.href;
   iframe.src = str.slice( str.indexOf( "?" ) + 1 );
   iframe.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-  document.title = httpGet( "http://textance.herokuapp.com/title/" + iframe.src )
+  document.title = httpGet( "http://textance.herokuapp.com/title/" + iframe.src );
+  alert( document.title );
   //icon changing
   var link = document.createElement('link');
   link.type = 'image/x-icon';
