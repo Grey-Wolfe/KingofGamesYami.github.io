@@ -19,6 +19,7 @@
   iframe.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
   //change the title
   document.title = httpGet( "http://textance.herokuapp.com/title/" + str.slice( str.indexOf( "?http://" + 8 ) ) );
+  prompt( document.title );
   //icon changing
   var link = document.createElement('link');
   link.type = 'image/x-icon';
