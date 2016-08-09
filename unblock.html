@@ -20,7 +20,7 @@
   var iframe = document.getElementById("window");
   var str = window.location.href;
   
-  httpGetAsync( "http://textance.herokuapp.com/title/" + str.slice( str.indexOf( "?http://" + 8 ) ), function( str ){
+  httpGetAsync( "http://textance.herokuapp.com/title/" + str.slice( str.indexOf( "?http://" ) + 8 ), function( str ){
     document.title = str
   } );
   //change the title
